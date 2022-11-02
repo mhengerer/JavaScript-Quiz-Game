@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Quiz Game</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex">
+      <div class="scores"><a href="./highscores.html">View Highscores</a></div>
+
+      <div class="timer">Time: <span id="time">0</span></div>
+    </div>
+
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>JavaScript Quiz!</h1>
+        <p>
+          Answer the questions as fast as you can! Recall all the things you've
+          studied; This is the moment you have been training for! Remember:
+          Every incorrect answer will count against you, meaning that you will
+          lose time and get a lower score. Good Luck!
+        </p>
+        <button id="start">Start Game!</button>
+      </div>
+
+      <div id="questions" class="hide">
+        <h3 id="question-title"></h3>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h2>Finished!</h2>
+        <p>
+          <span id="final-score"></span> is your score this time around. I think
+          you can do better! So submit your scrore to our leaderboards and go
+          again!
+        </p>
+        <p>
+          Enter Initials:
+          <input type="text" name="initials" id="initials" max="3" />
+          <button id="submit">Submit!</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback-hide"></div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
