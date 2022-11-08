@@ -19,93 +19,93 @@ var currentQuestion;
 
 var questions = [
   {
-    question: "whats 19 x 4215?",
+    question: "What is the Concatenation Operator in JS?",
     answers: [
-      { text: "45654", correct: false },
-      { text: "93543", correct: false },
-      { text: "80085", correct: true },
-      { text: "73336", correct: false },
+      { text: "=", correct: false },
+      { text: "-", correct: false },
+      { text: "+", correct: true },
+      { text: "%", correct: false },
     ],
   },
   {
-    question: "what?",
+    question: "How do we connect an external JavaScript file to a HTML file?",
     answers: [
-      { text: "scrip", correct: false },
-      { text: "scramp", correct: false },
-      { text: "scromp", correct: true },
-      { text: "slamp", correct: false },
+      { text: "With a link element in the head", correct: false },
+      { text: "With a link element at the end of the body", correct: false },
+      { text: "With a script element in the head", correct: false },
+      { text: "With a script element at the end of the body", correct: true },
     ],
   },
   {
-    question: "when?",
+    question: "What is an Assignment Operator in JS?",
     answers: [
-      { text: "blip", correct: false },
-      { text: "blop", correct: false },
-      { text: "bourg", correct: true },
-      { text: "bromp", correct: false },
+      { text: "=", correct: true },
+      { text: "-", correct: false },
+      { text: "+", correct: false },
+      { text: "%", correct: false },
     ],
   },
   {
-    question: "where?",
+    question: "This primitive type of variable can be described as a series of charecter's surrounded by quotes.",
     answers: [
-      { text: "grom", correct: false },
-      { text: "grim", correct: false },
-      { text: "grem", correct: true },
-      { text: "glomp", correct: false },
+      { text: "number", correct: false },
+      { text: "array", correct: false },
+      { text: "string", correct: true },
+      { text: ".length", correct: false },
     ],
   },
   {
-    question: "how?",
+    question: "console.log(100 % 10) expression would return what integer?",
     answers: [
-      { text: "45asd", correct: false },
-      { text: "93asdfa", correct: false },
-      { text: "80asdf", correct: true },
-      { text: "73asdf", correct: false },
+      { text: "0", correct: true },
+      { text: "4", correct: false },
+      { text: "0.1", correct: false },
+      { text: "-1", correct: false },
     ],
   },
   {
-    question: "why?",
+    question: "What is a collection of properties called?",
     answers: [
-      { text: "45ffff654", correct: false },
-      { text: "9asdf3543", correct: false },
-      { text: "800asdfa85", correct: true },
-      { text: "73336", correct: false },
+      { text: "string", correct: false },
+      { text: "array", correct: false },
+      { text: "object", correct: true },
+      { text: ".length", correct: false },
     ],
   },
   {
-    question: "for what reason?",
+    question: "This property returns the length of a string:",
     answers: [
-      { text: "456asdf54", correct: false },
-      { text: "93543", correct: false },
-      { text: "800asdf85", correct: true },
-      { text: "73336", correct: false },
+      { text: "object", correct: false },
+      { text: "string", correct: false },
+      { text: "array", correct: false },
+      { text: ".length", correct: true },
     ],
   },
   {
-    question: "whom?",
+    question: "Described as operators that take in 2 or more expressions and return true or false.",
     answers: [
-      { text: "45asdf654", correct: false },
-      { text: "93543", correct: false },
-      { text: "80085", correct: true },
-      { text: "73336", correct: false },
+      { text: "arithmetic operators", correct: false },
+      { text: "assignment operators", correct: false },
+      { text: "logical operators", correct: true },
+      { text: "conditional operators", correct: false },
     ],
   },
   {
-    question: "where art tho?",
+    question: "What is the Logical Not operator in JS?",
     answers: [
-      { text: "45654", correct: false },
-      { text: "935sdaf43", correct: false },
-      { text: "80085", correct: true },
-      { text: "73336", correct: false },
+      { text: "!", correct: true },
+      { text: "$", correct: false },
+      { text: "&", correct: false },
+      { text: "%", correct: false },
     ],
   },
   {
-    question: "gwen stefani?",
+    question: "What symbol is used to write a modulus expression?",
     answers: [
-      { text: "45654", correct: false },
-      { text: "93543", correct: false },
-      { text: "asd", correct: true },
-      { text: "73336", correct: false },
+      { text: "$", correct: false },
+      { text: "%", correct: true },
+      { text: "&", correct: false },
+      { text: "!", correct: false },
     ],
   },
 ];
@@ -178,9 +178,9 @@ function endScreen() {
 function saveHighScore(event) {
     var initials = initialsEl.value
     console.log(initials);  
-    var highScore = [initials, timeLeft]
+    var highScore = [{name: initials, score: timeLeft}]
     console.log(highScore);
-    localStorage.setItem('High-Scores', highScore)
+    localStorage.setItem('High-Scores',  JSON.stringify(highScore))
     initialsEl.value = '';
 
 }
